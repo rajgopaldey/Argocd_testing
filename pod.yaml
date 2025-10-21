@@ -4,10 +4,13 @@ metadata:
   name: raju_nginx
   labels:
     app.kubernetes.io/name: raju_nginx
+    app.kubernetes.io/name1: raju_nginx
+    app.kubernetes.io/name2: raju_nginx
 spec:
   containers:
     - name: nginx     #motor dana 
       image: nginx
       ports:
         - containerPort: 80
+
 
