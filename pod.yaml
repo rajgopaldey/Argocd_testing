@@ -1,17 +1,16 @@
 apiVersion: v1
-kind: Pod
+kind: Service
 metadata:
-  name: nginx8976
-  labels:
-    app.kubernetes.io/name: raju-nginx
-    app.kubernetes.io/instance3: raju-nginx
-    app.kubernetes.io/instance2: raju-nginx
+  name: raju-nginx
 spec:
-  containers:
-    - name: nginx
-      image: nginx:latest
-      ports:
-        - containerPort: 80
+  selector:
+    app.kubernetes.io/name: raju-nginx
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+  type: ClusterIP
+
 
 
 
